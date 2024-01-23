@@ -1,11 +1,5 @@
-@import './color.scss';
-
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
+@import './color';
+@import './fonts';
 
 body {
   padding: 1rem;
