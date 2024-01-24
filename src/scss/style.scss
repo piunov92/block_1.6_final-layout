@@ -1,9 +1,6 @@
 @import '~normalize.css';
-@import './color';
 @import './fonts';
-
-.block-1 {
-  width: 200px;
-  height: 200px;
-  border: 2px solid red;
-}
+@import './wrapper';
+@import './header';
+@import "./nav";
+@import "./btn";

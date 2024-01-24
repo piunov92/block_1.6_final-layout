@@ -1,0 +1,50 @@
+.btn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn--image {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-size: cover;
+}
+
+.btn--image:hover {
+  rect {
+    transition: all .8s ease;
+    fill: rgba(245, 5, 5, 0.31);
+  }
+  path {
+    transition: all .8s ease;
+    fill: red;
+  }
+}
+
+.btn--image-burger {
+  margin-left: 1rem;
+}
+
+.btn--image-logo {
+  width: 96.548px;
+  height: 50.815px;
+  margin-left: 1rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  border-radius: 0;
+  background-image: url('../img/logo.svg');
+}
+
+.btn--image-repair {
+  margin-left: 1rem;
+}
+
+.btn--image-status {
+  margin: 0 1rem;
+}

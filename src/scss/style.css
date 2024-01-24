@@ -1,14 +1,105 @@
 @import '~normalize.css';
 @font-face {
-  font-family: "Comic";
-  src: url("../fonts/comic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Regular.woff") format("woff"), url("../fonts/TTLakes-Regular.eot") format("eot");
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }
-.block-1 {
-  width: 200px;
-  height: 200px;
-  border: 2px solid red;
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Medium.woff") format("woff"), url("../fonts/TTLakes-Medium.eot") format("eot");
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Bold.woff") format("woff"), url("../fonts/TTLakes-Bold.eot") format("eot");
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 88px;
+  border-bottom: 1px solid #D9FFF5;
+}
+
+.nav__btn-right, .nav__btn-left {
+  display: flex;
+  height: inherit;
+  width: fit-content;
+  align-items: center;
+}
+
+.nav__divider {
+  width: 2px;
+  height: 32px;
+  border-radius: 1px;
+  background: #EAEAEA;
+  margin-left: 1rem;
+}
+
+.btn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn--image {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-size: cover;
+}
+
+.btn--image:hover rect {
+  transition: all 0.8s ease;
+  fill: rgba(245, 5, 5, 0.31);
+}
+.btn--image:hover path {
+  transition: all 0.8s ease;
+  fill: red;
+}
+
+.btn--image-burger {
+  margin-left: 1rem;
+}
+
+.btn--image-logo {
+  width: 96.548px;
+  height: 50.815px;
+  margin-left: 1rem;
+  cursor: not-allowed;
+  pointer-events: none;
+  border-radius: 0;
+  background-image: url("../img/logo.svg");
+}
+
+.btn--image-repair {
+  margin-left: 1rem;
+}
+
+.btn--image-status {
+  margin: 0 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+@import './color';
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 88px;
+  border-bottom: 1px solid $header__nav-shadow;
+}
+
+

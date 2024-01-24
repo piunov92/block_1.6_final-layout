@@ -1,6 +1,31 @@
 @font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+  font-family: "TT Lakes";
+  src:
+    url("../fonts/TTLakes-Regular.woff") format("woff"),
+    url("../fonts/TTLakes-Regular.eot") format("eot");
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }
+
+@font-face {
+  font-family: "TT Lakes";
+  src:
+    url("../fonts/TTLakes-Medium.woff") format("woff"),
+    url("../fonts/TTLakes-Medium.eot") format("eot");
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src:
+    url("../fonts/TTLakes-Bold.woff") format("woff"),
+    url("../fonts/TTLakes-Bold.eot") format("eot");
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+

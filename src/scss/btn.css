@@ -1,0 +1,30 @@
+.btn {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn--image {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-size: cover;
+}
+
+.btn--image-burger {
+  margin-left: 1rem;
+  background-image: url("../img/burger.svg");
+}
+
+.btn--image-logo {
+  width: 96.548px;
+  height: 50.815px;
+  margin-left: 1rem;
+  background-image: url("../img/logo.svg");
+}
+
+/*# sourceMappingURL=btn.css.map */

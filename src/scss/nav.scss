@@ -1,0 +1,22 @@
+%nav-btn {
+  display: flex;
+  height: inherit;
+  width: fit-content;
+  align-items: center;
+}
+
+.nav__btn-left {
+  @extend %nav-btn;
+}
+
+.nav__btn-right {
+  @extend %nav-btn;
+}
+
+.nav__divider {
+  width: 2px;
+  height: 32px;
+  border-radius: 1px;
+  background: $header__nav-divider;
+  margin-left: 1rem;
+}
