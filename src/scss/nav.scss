@@ -11,6 +11,9 @@
 
 .nav__btn-right {
   @extend %nav-btn;
+  .hidden {
+    display: none;
+  }
 }
 
 .nav__divider {

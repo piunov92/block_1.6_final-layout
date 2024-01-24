@@ -29,6 +29,7 @@
 
 .btn--image-burger {
   margin-left: 1rem;
+  order: 0;
 }
 
 .btn--image-logo {
@@ -39,6 +40,7 @@
   pointer-events: none;
   border-radius: 0;
   background-image: url('../img/logo.svg');
+  order: 1;
 }
 
 .btn--image-repair {

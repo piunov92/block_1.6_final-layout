@@ -45,6 +45,10 @@
   align-items: center;
 }
 
+.nav__btn-right .hidden {
+  display: none;
+}
+
 .nav__divider {
   width: 2px;
   height: 32px;
@@ -82,6 +86,7 @@
 
 .btn--image-burger {
   margin-left: 1rem;
+  order: 0;
 }
 
 .btn--image-logo {
@@ -92,6 +97,7 @@
   pointer-events: none;
   border-radius: 0;
   background-image: url("../img/logo.svg");
+  order: 1;
 }
 
 .btn--image-repair {
@@ -100,6 +106,16 @@
 
 .btn--image-status {
   margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .nav__btn-right .hidden {
+    display: block;
+  }
+
+  .nav__btn-left .nav__divider {
+    order: 2;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

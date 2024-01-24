@@ -1,0 +1,13 @@
+@media (min-width: $screen-md) {
+  .nav__btn-right {
+    .hidden {
+      display: block;
+    }
+  }
+
+  .nav__btn-left {
+    .nav__divider {
+      order: 2;
+    }
+  }
+}
