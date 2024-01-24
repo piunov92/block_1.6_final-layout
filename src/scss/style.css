@@ -1,4 +1,12 @@
 @import '~normalize.css';
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "TT Lakes";
   src: url("../fonts/TTLakes-Regular.woff") format("woff"), url("../fonts/TTLakes-Regular.eot") format("eot");
@@ -106,6 +114,96 @@
 
 .btn--image-status {
   margin: 0 1rem;
+}
+
+.btn--read {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  margin-top: 1rem;
+  color: #1B1C21;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__title {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.main__title-highlight {
+  margin-right: 0.75rem;
+}
+
+.main__title-text {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+}
+
+.main__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__description-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  align-items: center;
+  flex-basis: content;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+}
+
+.main__description-nav--slide {
+  margin: 1px;
+  padding: 0.5rem 1rem;
+  font-family: "TT Lakes", sans-serif;
+  color: #7E7E82;
+  font-size: medium;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.main__description-nav--slide:hover {
+  outline: 2px solid #B8FFEC;
+  border-radius: 6px;
+  background: #FFF;
+}
+
+.main__description-text {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0 0 1rem;
+}
+.main__description-text p {
+  color: #1B1C21;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
 }
 
 @media (min-width: 768px) {
