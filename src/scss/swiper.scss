@@ -1,0 +1,39 @@
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/modules/pagination";
+
+.swiper {
+  width: 320px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #B5B6BC;
+}
+
+.cards {
+  display: flex;
+  height: 72px;
+  &__item {
+    display: flex;
+    height: inherit;
+    width: 240px !important;
+    margin-right: 1rem;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    //border: 1px solid red;
+    background: #FFF;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.cards__brand {
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}

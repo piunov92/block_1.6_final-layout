@@ -37,9 +37,12 @@
   flex-basis: content;
   margin-top: 1.5rem;
   margin-left: 1rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-.main__description-nav--slide {
+.main__description-nav-slide {
   margin: 1px;
   padding: 0.5rem 1rem;
   font-family: "TT Lakes", sans-serif;
@@ -71,4 +74,30 @@
     line-height: 18px;
     letter-spacing: 0.2px;
   }
+}
+
+.main__description-img {
+  width: 320px;
+  height: 230px;
+  background: url(../img/logo-lg.png) no-repeat 0 2rem / cover;
+}
+
+.main__description-brands {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 0 1rem;
+  padding-top: 1rem;
+  white-space: pre-line;
+  border-top: 1px solid $line-shadow;
+}
+
+.main__description-brands-title {
+  color: $text-title;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
 }

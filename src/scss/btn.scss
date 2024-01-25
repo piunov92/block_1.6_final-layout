@@ -65,3 +65,17 @@
   line-height: 24px;
   letter-spacing: -0.2px;
 }
+
+//SWIPER BUTTON
+.cards__btn {
+  padding: 0;
+  float: right;
+  margin: auto;
+  height: 40px;
+  width: 40px;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
