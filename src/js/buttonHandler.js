@@ -40,6 +40,7 @@ const cloneBtnRead = document.querySelector('.btn--read').cloneNode(true)
 document
   .querySelector('.main__description-brands-swiper')
   .appendChild(cloneBtnRead)
+cloneBtnRead.className += ' btn--read-cards'
 
 btnReadContent(btnRead, 0, text, 0, selectorText, spanElement, hiddenString)
 

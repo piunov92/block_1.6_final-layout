@@ -28,6 +28,14 @@
     justify-content: left;
   }
 
+  .hidden {
+    display: none !important;
+  }
+
+  .btn--read-cards {
+    display: flex;
+  }
+
   .swiper {
     width: inherit !important;
   }

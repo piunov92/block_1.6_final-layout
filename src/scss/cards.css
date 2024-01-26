@@ -1,0 +1,25 @@
+.cards {
+  display: flex;
+  min-width: 0;
+}
+.cards__item {
+  display: flex;
+  position: relative;
+  justify-content: right;
+  height: 72px;
+  width: 240px !important;
+  margin: 1rem 1rem 2rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  /*border: 1px solid red;*/
+  background: #FFF;
+}
+.cards__brand {
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/*# sourceMappingURL=cards.css.map */

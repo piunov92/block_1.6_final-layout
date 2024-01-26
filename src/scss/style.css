@@ -126,6 +126,14 @@
   letter-spacing: -0.2px;
 }
 
+.btn--read-cards {
+  display: none;
+  position: relative;
+  margin: 0;
+  top: -50px;
+  bottom: 0;
+}
+
 .cards__btn {
   float: right;
   margin: 1rem 1rem 0 0;
@@ -272,6 +280,14 @@
   .cards {
     flex-wrap: wrap;
     justify-content: left;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .btn--read-cards {
+    display: flex;
   }
 
   .swiper {
@@ -736,7 +752,7 @@ button.swiper-pagination-bullet {
   justify-content: right;
   height: 72px;
   width: 240px !important;
-  margin: 1rem 1rem 2rem 1rem;
+  margin: 0 1.5rem 1rem 0;
   border-radius: 6px;
   border: 1px solid #EAEAEA;
   /*border: 1px solid red;*/

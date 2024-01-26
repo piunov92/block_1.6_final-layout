@@ -66,6 +66,14 @@
   letter-spacing: -0.2px;
 }
 
+.btn--read-cards {
+  display: none;
+  position: relative;
+  margin:0;
+  top: -50px;
+  bottom: 0;
+}
+
 //SWIPER BUTTON
 .cards__btn {
   float: right;

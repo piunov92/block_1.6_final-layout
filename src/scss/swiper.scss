@@ -12,27 +12,3 @@
   font-size: 14px;
   background-color: #B5B6BC;
 }
-
-.cards {
-  display: flex;
-  min-width: 0;
-  &__item {
-    display: flex;
-    position: relative;
-    justify-content: right;
-    height: 72px;
-    width: 240px !important;
-    margin: 1rem 1rem 2rem 1rem;
-    border-radius: 6px;
-    border: 1px solid #EAEAEA;
-    /*border: 1px solid red;*/
-    background: #FFF;
-  }
-  &__brand {
-    position: absolute;
-    left: 16px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
-}
