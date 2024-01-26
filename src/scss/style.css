@@ -202,6 +202,11 @@
   background: #FFF;
 }
 
+.main__description-contain {
+  display: flex;
+  flex-direction: column;
+}
+
 .main__description-text {
   display: flex;
   flex-direction: column;
@@ -220,6 +225,7 @@
 .main__description-img {
   width: 320px;
   height: 230px;
+  flex-shrink: 0;
   background: url(../img/logo-lg.png) no-repeat 0 2rem/cover;
 }
 
@@ -680,8 +686,8 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   line-height: 20px;
   font-size: 14px;
   background-color: #B5B6BC;
@@ -719,6 +725,18 @@ button.swiper-pagination-bullet {
 
   .nav__btn-left .nav__divider {
     order: 2;
+  }
+
+  .main__description-contain {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .main__description-img {
+    width: 360px;
+    height: 259.655px;
+    margin-left: 3rem;
+    flex-shrink: 0;
   }
 
   .cards {

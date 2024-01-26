@@ -61,6 +61,11 @@
   }
 }
 
+.main__description-contain {
+  display: flex;
+  flex-direction: column;
+}
+
 .main__description-text {
   display: flex;
   flex-direction: column;
@@ -79,6 +84,7 @@
 .main__description-img {
   width: 320px;
   height: 230px;
+  flex-shrink: 0;
   background: url(../img/logo-lg.png) no-repeat 0 2rem / cover;
 }
 
