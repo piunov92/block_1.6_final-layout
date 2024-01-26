@@ -695,9 +695,10 @@ button.swiper-pagination-bullet {
   display: flex;
   height: inherit;
   width: 240px !important;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
   border-radius: 6px;
-  border: 1px solid #EAEAEA;
+  border: 1px solid red;
   background: #FFF;
 }
 .cards__item:first-child {
@@ -718,6 +719,20 @@ button.swiper-pagination-bullet {
 
   .nav__btn-left .nav__divider {
     order: 2;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .swiper {
+    width: inherit;
+    overflow: visible;
+  }
+
+  .swiper-pagination {
+    display: none;
   }
 }
 

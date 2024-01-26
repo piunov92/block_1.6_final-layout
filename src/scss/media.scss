@@ -11,4 +11,16 @@
     }
   }
 
+  .cards {
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .swiper {
+    width: inherit;
+    overflow: visible;
+  }
+  .swiper-pagination {
+    display: none;
+  }
 }

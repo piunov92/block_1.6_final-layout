@@ -3,19 +3,36 @@ import Swiper from 'swiper'
 import { Keyboard, Pagination } from 'swiper/modules'
 Swiper.use([Pagination, Keyboard])
 
-// let middleScreen = window.matchMedia('(max-width: 767px)')
-// if (middleScreen.matches) {
-new Swiper('.swiper', {
-  direction: 'horizontal',
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true
-  },
-  keyboard: {
-    enabled: true,
-    onlyInViewport: false
+const breakpoint = window.matchMedia('(min-width:767px)')
+let mainDescriptionBrandsSwiper
+
+const breakpointChecker = function () {
+  if (breakpoint.matches) {
+    if (mainDescriptionBrandsSwiper !== undefined) {
+      mainDescriptionBrandsSwiper.destroy(true, true)
+    }
+  } else if (!breakpoint.matches) {
+    return initSwiper()
   }
-})
-// } else document.querySelector('.swiper').classList.remove('swiper')
+}
+
+const initSwiper = function () {
+  mainDescriptionBrandsSwiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    longSwipes: 11,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false
+    }
+  })
+}
+
+breakpoint.addEventListener('change', breakpointChecker)
+breakpointChecker()
