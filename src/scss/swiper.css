@@ -2,13 +2,9 @@
   width: 320px;
 }
 
-.swiper-pagination {
-  bottom: 0 !important;
-}
-
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   line-height: 20px;
   font-size: 14px;
   background-color: #B5B6BC;
@@ -16,38 +12,27 @@
 
 .cards {
   display: flex;
-  min-width: 0;
+  height: 72px;
 }
-
 .cards__item {
-  position: relative;
+  display: flex;
+  height: inherit;
   width: 240px !important;
-  margin: 1rem 1rem 2rem 1rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
   border-radius: 6px;
-  border: 1px solid #EAEAEA;
-  /*border: 1px solid red;*/
+  border: 1px solid red;
   background: #FFF;
+}
+.cards__item:first-child {
+  margin-left: 0;
 }
 
 .cards__brand {
-  position: absolute;
   left: 16px;
   top: 0;
   bottom: 0;
   margin: auto;
-}
-
-.cards__button {
-  padding: 0;
-  float: right;
-  margin: 1rem 1rem 1rem 0;
-  height: 40px;
-  width: 40px;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=swiper.css.map */

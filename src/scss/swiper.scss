@@ -15,26 +15,24 @@
 
 .cards {
   display: flex;
-  height: 72px;
+  min-width: 0;
   &__item {
     display: flex;
-    height: inherit;
+    position: relative;
+    justify-content: right;
+    height: 72px;
     width: 240px !important;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem 1rem 2rem 1rem;
     border-radius: 6px;
-    //border: 1px solid #EAEAEA;
-    border: 1px solid red;
+    border: 1px solid #EAEAEA;
+    /*border: 1px solid red;*/
     background: #FFF;
-    &:first-child {
-      margin-left: 0;
-    }
   }
-}
-
-.cards__brand {
-  left: 16px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  &__brand {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
 }
