@@ -1,40 +1,31 @@
-const btnRead = document.getElementsByClassName('btn--read')
-let textDescription = document.getElementsByClassName('main__description-text')
-let text = textDescription.item(0).children
-let hiddenString =
-  'Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.'
-let spanElement = document.createElement('span')
-const selectorText = '.hidden-text'
-// const selectorCards = '.hidden-cards'
+const buttonShowText = document.querySelector('.btn--read')
+const textDescription = document.querySelector('.text--about')
+const span = document.createElement('span')
+const textHidden =
+  'Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, ' +
+  'что подтверждает большое количество постоянных клиентов. ' +
+  'Мы гордимся тем, что к нам обращаются по рекомендациям и, ' +
+  'в свою очередь, советуют нас родным и близким.'
 
-let btnReadContent = function (
-  btnClassName,
-  indexTarget,
-  childrenItems,
-  indexChildren,
-  matchesSelector,
-  selectorElement,
-  content
-) {
-  btnClassName[indexTarget].addEventListener('click', function () {
-    if (
-      childrenItems[indexChildren].children.length &&
-      childrenItems[indexChildren].lastElementChild.matches(matchesSelector)
-    ) {
-      childrenItems[indexChildren].removeChild(selectorElement)
-      btnClassName[indexTarget].lastElementChild.textContent = 'Читать далее'
-      btnClassName[indexTarget].firstElementChild.style.transform =
-        'rotate(0deg)'
-    } else {
-      btnClassName[indexTarget].lastElementChild.textContent = 'Скрыть'
-      btnClassName[indexTarget].firstElementChild.style.transform =
-        'rotate(180deg)'
-      selectorElement.className = 'hidden-text'
-      selectorElement.innerText = content
-      childrenItems[indexChildren].appendChild(selectorElement)
-    }
-  })
+function buttonContent(text, btn, degrees) {
+  btn.lastElementChild.textContent = text
+  btn.firstElementChild.style.transform = `rotate(${degrees}deg)`
 }
+
+buttonShowText.addEventListener('click', function () {
+  if (
+    textDescription.children.length &&
+    textDescription.lastElementChild.matches('.hidden-text')
+  ) {
+    textDescription.removeChild(span)
+    buttonContent('Читать далее', buttonShowText, 0)
+  } else {
+    buttonContent('Скрыть', buttonShowText, 180)
+    span.className = 'hidden-text'
+    span.innerText = textHidden
+    textDescription.appendChild(span)
+  }
+})
 
 const cloneBtnRead = document.querySelector('.btn--read').cloneNode(true)
 document
@@ -42,21 +33,20 @@ document
   .appendChild(cloneBtnRead)
 cloneBtnRead.className += ' btn--read-cards'
 
-btnReadContent(btnRead, 0, text, 0, selectorText, spanElement, hiddenString)
-
-// btnRead[0].addEventListener('click', function () {
-//   if (
-//     text[0].children.length &&
-//     text[0].lastElementChild.matches(selectorText)
-//   ) {
-//     text[0].removeChild(spanElement)
-//     btnRead[0].lastElementChild.textContent = 'Читать далее'
-//     btnRead[0].firstElementChild.style.transform = 'rotate(0deg)'
-//   } else {
-//     btnRead[0].lastElementChild.textContent = 'Скрыть'
-//     btnRead[0].firstElementChild.style.transform = 'rotate(180deg)'
-//     spanElement.className = 'hidden-text'
-//     spanElement.innerText = hiddenString
-//     text[0].appendChild(spanElement)
-//   }
-// })
+let buttonShowCards = cloneBtnRead
+buttonShowCards.lastElementChild.textContent = 'Показать все'
+buttonShowCards.addEventListener('click', function () {
+  const cardsItem = document.querySelectorAll('.cards__item')
+  const lastElement = document.querySelector('.cards').lastElementChild
+  if (lastElement.matches('.cards__show-md')) {
+    for (let i = 0; i < cardsItem.length; i++) {
+      cardsItem[i].classList.remove('cards__show-md')
+    }
+    buttonContent('Показать все', buttonShowCards, 0)
+  } else {
+    buttonContent('Скрыть', buttonShowCards, 180)
+    for (let i = 0; i < cardsItem.length; i++) {
+      cardsItem[i].className += ' cards__show-md'
+    }
+  }
+})

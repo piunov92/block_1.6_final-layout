@@ -1,7 +1,7 @@
 @media (min-width: $screen-md) {
   .nav__btn-right {
     .hidden {
-      display: block;
+      display: block !important;
     }
   }
 
@@ -26,10 +26,12 @@
   .cards {
     flex-wrap: wrap;
     justify-content: left;
-  }
-
-  .hidden {
-    display: none !important;
+    &__hidden {
+      display: none !important;
+    }
+    &__show-md {
+      display: flex !important;
+    }
   }
 
   .btn--read-cards {

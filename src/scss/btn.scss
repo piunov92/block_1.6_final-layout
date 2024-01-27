@@ -69,6 +69,7 @@
 .btn--read-cards {
   display: none;
   position: relative;
+  z-index: 1;
   margin:0;
   top: -50px;
   bottom: 0;

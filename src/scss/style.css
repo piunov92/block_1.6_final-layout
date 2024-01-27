@@ -129,6 +129,7 @@
 .btn--read-cards {
   display: none;
   position: relative;
+  z-index: 1;
   margin: 0;
   top: -50px;
   bottom: 0;
@@ -258,7 +259,7 @@
 
 @media (min-width: 768px) {
   .nav__btn-right .hidden {
-    display: block;
+    display: block !important;
   }
 
   .nav__btn-left .nav__divider {
@@ -281,9 +282,11 @@
     flex-wrap: wrap;
     justify-content: left;
   }
-
-  .hidden {
+  .cards__hidden {
     display: none !important;
+  }
+  .cards__show-md {
+    display: flex !important;
   }
 
   .btn--read-cards {
