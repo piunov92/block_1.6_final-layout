@@ -12,12 +12,12 @@ const breakpointChecker = function () {
       mainDescriptionBrandsSwiper.destroy(true, true)
     }
   } else if (!breakpoint.matches) {
-    return initSwiper()
+    return initSwiper('swiper--brands'), initSwiper('swiper--tech')
   }
 }
 
-const initSwiper = function () {
-  mainDescriptionBrandsSwiper = new Swiper('.swiper', {
+const initSwiper = function (swiperSelector) {
+  mainDescriptionBrandsSwiper = new Swiper(`.${swiperSelector}`, {
     direction: 'horizontal',
     slidesPerView: 'auto',
     longSwipes: 11,
@@ -27,11 +27,11 @@ const initSwiper = function () {
       clickable: true,
       dynamicBullets: false,
       enabled: true
-    },
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false
     }
+    // keyboard: {
+    //   enabled: true,
+    //   onlyInViewport: true
+    // }
   })
 }
 

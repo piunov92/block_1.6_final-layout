@@ -27,13 +27,11 @@ buttonShowText.addEventListener('click', function () {
   }
 })
 
-const cloneBtnRead = document.querySelector('.btn--read').cloneNode(true)
+const buttonShowCards = document.querySelector('.btn--read').cloneNode(true)
 document
   .querySelector('.main__description-brands-swiper')
-  .appendChild(cloneBtnRead)
-cloneBtnRead.className += ' btn--read-cards'
-
-let buttonShowCards = cloneBtnRead
+  .appendChild(buttonShowCards)
+buttonShowCards.className += ' btn--read-cards'
 buttonShowCards.lastElementChild.textContent = 'Показать все'
 buttonShowCards.addEventListener('click', function () {
   const cardsItem = document.querySelectorAll('.cards__item')
@@ -50,3 +48,19 @@ buttonShowCards.addEventListener('click', function () {
     }
   }
 })
+
+const techCards = document
+  .querySelector('.main__description-brands')
+  .cloneNode(true)
+document.querySelector('.main__description').appendChild(techCards)
+
+const mainDescription = document.querySelector('.main__description')
+// console.log(mainDescription)
+const mainDescriptionTechCards = mainDescription.children[3]
+mainDescriptionTechCards.className += ' .main__description-brands--tech'
+// console.log(mainDescriptionTechCards)
+const mainDescriptionTechCardsSwiper =
+  mainDescriptionTechCards.querySelector('.swiper')
+mainDescriptionTechCardsSwiper.classList.remove('swiper--brands')
+mainDescriptionTechCardsSwiper.className += ' swiper--tech'
+// console.log(mainDescriptionTechCards.children[1].children[0])
