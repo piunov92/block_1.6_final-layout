@@ -28,5 +28,12 @@
   //cards__text repairCards
   &__text {
     top: 1rem;
+    color: $text-color;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
   }
 }

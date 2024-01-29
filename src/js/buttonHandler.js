@@ -33,8 +33,9 @@ document
   .appendChild(buttonShowCards)
 buttonShowCards.className += ' btn--read-cards'
 buttonShowCards.lastElementChild.textContent = 'Показать все'
+
 buttonShowCards.addEventListener('click', function () {
-  const cardsItem = document.querySelectorAll('.cards__item')
+  const cardsItem = document.querySelectorAll('.cards__hidden')
   const lastElement = document.querySelector('.cards').lastElementChild
   if (lastElement.matches('.cards__show-md')) {
     for (let i = 0; i < cardsItem.length; i++) {
@@ -43,6 +44,31 @@ buttonShowCards.addEventListener('click', function () {
     buttonContent('Показать все', buttonShowCards, 0)
   } else {
     buttonContent('Скрыть', buttonShowCards, 180)
+    for (let i = 0; i < cardsItem.length; i++) {
+      cardsItem[i].className += ' cards__show-md'
+    }
+  }
+})
+
+const buttonShowCardsRepair = document
+  .querySelector('.btn--read')
+  .cloneNode(true)
+document
+  .querySelector('.main__description-brands-swiper--repair')
+  .appendChild(buttonShowCardsRepair)
+buttonShowCardsRepair.className += ' btn--read-cards btn--read-repair'
+buttonShowCardsRepair.lastElementChild.textContent = 'Показать все'
+
+buttonShowCardsRepair.addEventListener('click', function () {
+  const cardsItem = document.querySelectorAll('.cards__hidden--repair')
+  const lastElement = document.querySelector('.cards--repair').lastElementChild
+  if (lastElement.matches('.cards__show-md')) {
+    for (let i = 0; i < cardsItem.length; i++) {
+      cardsItem[i].classList.remove('cards__show-md')
+    }
+    buttonContent('Показать все', buttonShowCardsRepair, 0)
+  } else {
+    buttonContent('Скрыть', buttonShowCardsRepair, 180)
     for (let i = 0; i < cardsItem.length; i++) {
       cardsItem[i].className += ' cards__show-md'
     }

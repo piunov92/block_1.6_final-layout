@@ -135,6 +135,10 @@
   bottom: 0;
 }
 
+.btn--read-repair {
+  top: -30px;
+}
+
 .cards__btn {
   float: right;
   margin: 1rem 1rem 0 0;
@@ -287,6 +291,9 @@
     justify-content: left;
   }
   .cards__hidden {
+    display: none !important;
+  }
+  .cards__hidden--repair {
     display: none !important;
   }
   .cards__show-md {
@@ -778,6 +785,13 @@ button.swiper-pagination-bullet {
 }
 .cards__text {
   top: 1rem;
+  color: #1B1C21;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
 }
 
 /*# sourceMappingURL=style.css.map */
