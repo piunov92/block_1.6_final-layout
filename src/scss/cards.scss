@@ -13,11 +13,20 @@
     /*border: 1px solid red;*/
     background: #FFF;
   }
+  //cards__item--repair repairCards
+  &__item--repair {
+    height: 160px;
+    border: 1px solid red;
+  }
   &__brand {
     position: absolute;
-    left: 16px;
+    left: 1rem;
     top: 0;
     bottom: 0;
     margin: auto;
+  }
+  //cards__text repairCards
+  &__text {
+    top: 1rem;
   }
 }
