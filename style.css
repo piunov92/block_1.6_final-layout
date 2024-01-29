@@ -427,6 +427,9 @@ template {
   top: -50px;
   bottom: 0; }
 
+.btn--read-repair {
+  top: -30px; }
+
 .cards__btn {
   float: right;
   margin: 1rem 1rem 0 0;
@@ -437,6 +440,9 @@ template {
   color: inherit;
   background-color: transparent;
   cursor: pointer; }
+
+.cards__btn--repair {
+  margin-top: 102px; }
 
 .main {
   display: flex;
@@ -550,6 +556,8 @@ template {
     flex-wrap: wrap;
     justify-content: left; }
     .cards__hidden {
+      display: none !important; }
+    .cards__hidden--repair {
       display: none !important; }
     .cards__show-md {
       display: flex !important; }
@@ -974,12 +982,24 @@ template {
     border: 1px solid #EAEAEA;
     /*border: 1px solid red;*/
     background: #FFF; }
+  .cards__item--repair {
+    height: 160px;
+    border: 1px solid red; }
   .cards__brand {
     position: absolute;
-    left: 16px;
+    left: 1rem;
     top: 0;
     bottom: 0;
     margin: auto; }
+  .cards__text {
+    top: 1rem;
+    color: #1B1C21;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px; }
 
 
 /*# sourceMappingURL=style.css.map*/
