@@ -10,13 +10,43 @@
     margin: 0 1.5rem 1rem 0;
     border-radius: 6px;
     border: 1px solid #EAEAEA;
-    /*border: 1px solid red;*/
+    //border: 1px solid red;
     background: #FFF;
   }
   //cards__item--repair repairCards
   &__item--repair {
     height: 160px;
+    //border: 1px solid red;
+  }
+  &__item--price {
+    flex-direction: column;
+    height: 200px;
+    width: 260px !important;
     border: 1px solid red;
+    &-padding {
+      padding: 1rem 0 0 1rem;
+    }
+    &--delete-top {
+      padding-top: 0;
+    }
+    &-title-fonts {
+      color: $text-title;
+      font-family: "TT Lakes", sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      opacity: 0.7218;
+    }
+    &-fonts {
+      color: $text-color;
+      font-family: "TT Lakes", sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+    }
   }
   &__brand {
     position: absolute;

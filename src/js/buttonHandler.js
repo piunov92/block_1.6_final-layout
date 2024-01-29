@@ -12,6 +12,17 @@ function buttonContent(text, btn, degrees) {
   btn.firstElementChild.style.transform = `rotate(${degrees}deg)`
 }
 
+//Ф-я копирования кнопок свайпов
+function copyButton(btnSelector, toElementSelector, addSelectors) {
+  const element = document.querySelector(`.${btnSelector}`).cloneNode(true)
+  document.querySelector(`.${toElementSelector}`).appendChild(element)
+  addSelectors.forEach((selector) => {
+    element.className += ` ${selector}`
+  })
+  element.lastElementChild.textContent = 'Показать все'
+  return element
+}
+
 buttonShowText.addEventListener('click', function () {
   if (
     textDescription.children.length &&
@@ -27,12 +38,17 @@ buttonShowText.addEventListener('click', function () {
   }
 })
 
-const buttonShowCards = document.querySelector('.btn--read').cloneNode(true)
-document
-  .querySelector('.main__description-brands-swiper')
-  .appendChild(buttonShowCards)
-buttonShowCards.className += ' btn--read-cards'
-buttonShowCards.lastElementChild.textContent = 'Показать все'
+const buttonShowCards = copyButton(
+  'btn--read',
+  'main__description-brands-swiper',
+  ['btn--read-cards']
+)
+
+const buttonShowCardsRepair = copyButton(
+  'btn--read',
+  'main__description-brands-swiper--repair',
+  ['btn--read-cards', 'btn--read-repair']
+)
 
 buttonShowCards.addEventListener('click', function () {
   const cardsItem = document.querySelectorAll('.cards__hidden')
@@ -49,15 +65,6 @@ buttonShowCards.addEventListener('click', function () {
     }
   }
 })
-
-const buttonShowCardsRepair = document
-  .querySelector('.btn--read')
-  .cloneNode(true)
-document
-  .querySelector('.main__description-brands-swiper--repair')
-  .appendChild(buttonShowCardsRepair)
-buttonShowCardsRepair.className += ' btn--read-cards btn--read-repair'
-buttonShowCardsRepair.lastElementChild.textContent = 'Показать все'
 
 buttonShowCardsRepair.addEventListener('click', function () {
   const cardsItem = document.querySelectorAll('.cards__hidden--repair')
