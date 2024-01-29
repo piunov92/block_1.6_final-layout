@@ -444,6 +444,32 @@ template {
 .cards__btn--repair {
   margin-top: 102px; }
 
+.cards-price__button {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 45px;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF3E79;
+  width: 119px;
+  height: 32px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  text-align: right;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  text-transform: uppercase; }
+  .cards-price__button--margin {
+    margin-left: 8px; }
+
 .main {
   display: flex;
   flex-direction: column; }
@@ -980,11 +1006,34 @@ template {
     margin: 0 1.5rem 1rem 0;
     border-radius: 6px;
     border: 1px solid #EAEAEA;
-    /*border: 1px solid red;*/
     background: #FFF; }
   .cards__item--repair {
-    height: 160px;
+    height: 160px; }
+  .cards__item--price {
+    flex-direction: column;
+    height: 200px;
+    width: 260px !important;
     border: 1px solid red; }
+    .cards__item--price-padding {
+      padding: 1rem 0 0 1rem; }
+    .cards__item--price--delete-top {
+      padding-top: 0; }
+    .cards__item--price-title-fonts {
+      color: #7E7E82;
+      font-family: "TT Lakes", sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      opacity: 0.7218; }
+    .cards__item--price-fonts {
+      color: #1B1C21;
+      font-family: "TT Lakes", sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0.2px; }
   .cards__brand {
     position: absolute;
     left: 1rem;
