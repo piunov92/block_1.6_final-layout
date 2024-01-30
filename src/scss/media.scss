@@ -1,7 +1,7 @@
 @media (min-width: $screen-md) {
   .nav__btn-right {
     .hidden {
-      display: block !important;
+      display: block;
     }
   }
 
@@ -27,13 +27,13 @@
     flex-wrap: wrap;
     justify-content: left;
     &__hidden {
-      display: none !important;
+      display: none;
     }
     &__hidden--repair {
-      display: none !important;
+      display: none;
     }
     &__show-md {
-      display: flex !important;
+      display: flex;
     }
   }
 
@@ -42,7 +42,7 @@
   }
 
   .swiper {
-    width: inherit !important;
+    width: inherit;
   }
   .swiper-pagination {
     display: none;
@@ -53,6 +53,19 @@
   }
 
   .main__description-price-table {
-    display: flex !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    &__about {
+      padding-top: 1rem;
+      text-align: left;
+    }
+    &__info {
+      text-align: right;
+    }
   }
 }

@@ -44,4 +44,41 @@
   border: none;
 }
 
+.main__description-price-note {
+  display: flex;
+  flex-direction: column;
+}
+.main__description-price-note--text {
+  max-width: 421px;
+  color: #1B1C21;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+.main__description-price-note--ref {
+  width: fit-content;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  color: #1B1C21;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+.main__description-price-note--ref--text {
+  position: relative;
+  top: -0.5rem;
+  left: 0;
+}
+
+.main__description-price-note--margin {
+  margin-left: 1rem;
+}
+
 /*# sourceMappingURL=table.css.map */
