@@ -1,0 +1,47 @@
+.main__description-price-table {
+  display: none;
+}
+
+.table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table--sizing {
+  width: 100%;
+  margin: 1rem;
+}
+
+.table__head {
+  padding-top: 2.45rem;
+  padding-left: 1rem;
+  color: #7E7E82;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  opacity: 0.7218;
+}
+
+.table__data {
+  padding: 1.5rem 0 1.5rem 1rem;
+  color: #1B1C21;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.table__row:first-child .table__data {
+  padding-top: 2.45rem;
+}
+
+.table__row:last-child .table__data {
+  border: none;
+}
+
+/*# sourceMappingURL=table.css.map */
