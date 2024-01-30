@@ -470,6 +470,9 @@ template {
   .cards-price__button--margin {
     margin-left: 8px; }
 
+.table__button {
+  position: initial; }
+
 .main {
   display: flex;
   flex-direction: column; }
@@ -564,35 +567,6 @@ template {
   line-height: 24px;
   letter-spacing: -0.2px;
   text-transform: uppercase; }
-
-@media (min-width: 768px) {
-  .nav__btn-right .hidden {
-    display: block !important; }
-  .nav__btn-left .nav__divider {
-    order: 2; }
-  .main__description-contain {
-    justify-content: space-between;
-    flex-direction: row; }
-  .main__description-img {
-    width: 360px;
-    height: 259.655px;
-    margin-left: 3rem;
-    flex-shrink: 0; }
-  .cards {
-    flex-wrap: wrap;
-    justify-content: left; }
-    .cards__hidden {
-      display: none !important; }
-    .cards__hidden--repair {
-      display: none !important; }
-    .cards__show-md {
-      display: flex !important; }
-  .btn--read-cards {
-    display: flex; }
-  .swiper {
-    width: inherit !important; }
-  .swiper-pagination {
-    display: none; } }
 
 /**
  * Swiper 11.0.5
@@ -1012,8 +986,7 @@ template {
   .cards__item--price {
     flex-direction: column;
     height: 200px;
-    width: 260px !important;
-    border: 1px solid red; }
+    width: 260px !important; }
     .cards__item--price-padding {
       padding: 1rem 0 0 1rem; }
     .cards__item--price--delete-top {
@@ -1049,6 +1022,140 @@ template {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.2px; }
+
+.main__description-price-table {
+  display: none; }
+
+.table {
+  border-collapse: collapse;
+  text-align: left; }
+
+.table--sizing {
+  width: 100%;
+  margin: 1rem; }
+
+.table__head {
+  padding-top: 2.45rem;
+  padding-left: 1rem;
+  color: #7E7E82;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  opacity: 0.7218; }
+
+.table__data {
+  padding: 1.5rem 0 1.5rem 1rem;
+  color: #1B1C21;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  border-bottom: 1px solid #EAEAEA; }
+
+.table__row:first-child .table__data {
+  padding-top: 2.45rem; }
+
+.table__row:last-child .table__data {
+  border: none; }
+
+.main__description-price-note {
+  display: flex;
+  flex-direction: column; }
+  .main__description-price-note--text {
+    max-width: 421px;
+    color: #1B1C21;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px; }
+  .main__description-price-note--ref {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    color: #1B1C21;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.7px; }
+    .main__description-price-note--ref--text {
+      position: relative;
+      top: -0.5rem;
+      left: 0; }
+
+.main__description-price-note--margin {
+  margin-left: 1rem; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #D9FFF5; }
+  .footer__about, .footer__policy, .footer__info {
+    padding: 1rem;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0; }
+
+.footer--fonts {
+  color: #7E7E82;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  opacity: 0.7218; }
+
+@media (min-width: 768px) {
+  .nav__btn-right .hidden {
+    display: block; }
+  .nav__btn-left .nav__divider {
+    order: 2; }
+  .main__description-contain {
+    justify-content: space-between;
+    flex-direction: row; }
+  .main__description-img {
+    width: 360px;
+    height: 259.655px;
+    margin-left: 3rem;
+    flex-shrink: 0; }
+  .cards {
+    flex-wrap: wrap;
+    justify-content: left; }
+    .cards__hidden {
+      display: none; }
+    .cards__hidden--repair {
+      display: none; }
+    .cards__show-md {
+      display: flex; }
+  .btn--read-cards {
+    display: flex; }
+  .swiper {
+    width: inherit; }
+  .swiper-pagination {
+    display: none; }
+  .main__description-brands--price-hidden {
+    display: none; }
+  .main__description-price-table {
+    display: flex;
+    flex-direction: column; }
+  .footer {
+    display: flex;
+    flex-direction: row; }
+    .footer__about {
+      padding-top: 1rem;
+      text-align: left; }
+    .footer__info {
+      text-align: right; } }
 
 
 /*# sourceMappingURL=style.css.map*/
