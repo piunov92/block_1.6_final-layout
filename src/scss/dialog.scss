@@ -1,0 +1,146 @@
+::backdrop {
+  background-color: $page-blur;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.modal {
+  height: 100vh;
+  min-width: 320px;
+  overflow-y: auto;
+  border: none;
+  @media (min-width: $screen-lt) {
+    width: 360px;
+  }
+}
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog--height {
+  height: inherit;
+}
+
+.dialog__nav  {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.dialog__bt {
+  height: 40px;
+  margin-right: 1rem;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+  border-radius: 50%;
+  :first-child {
+    margin-left: 1rem;
+  }
+}
+
+.dialog__logo {
+  flex-grow: 1;
+  flex-basis: 0;
+  margin-right: 4.8rem;
+}
+
+.dialog__svg:hover rect {
+  transition: all .8s ease;
+  fill: rgba(245, 5, 5, 0.31);
+}
+
+.dialog__svg:hover path {
+  transition: all .8s ease;
+  fill: red;
+}
+
+.list {
+  display: flex;
+  flex: 1 0 auto;
+  &__nav {
+    margin-top: 3.16rem;
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.list__item:not(.list__item:first-child) {
+  margin-top: 1.5rem;
+}
+
+.list__ref,
+.dialog__mail-font,
+.dialog__lang-text{
+  color: $text-color;
+  font-family: "TT Lakes", sans-serif ;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  &:hover {
+    color: $text-title;
+    .list__highlight {
+      visibility: visible;
+    }
+  }
+}
+
+.list__highlight {
+  position: absolute;
+  left: 0;
+  transform:translate(50%, -15%);
+  z-index: 9999;
+  visibility: hidden;
+}
+
+//.dialog__bt-footer {
+//  flex: 0 0 auto;
+//}
+
+//.dialog__nav-footer {
+//  flex: 0 0 auto;
+//}
+
+.dialog__bt-footer {
+  margin-right: 0;
+}
+
+.dialog__mail,
+.dialog__cn,
+.dialog__lang {
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+}
+
+.dialog__lang-list {
+  display: flex;
+}
+
+.dialog__lang-bt {
+  border: none;
+  background: inherit;
+  margin-right: 0.45rem;
+}
+
+.dialog__cn-font {
+  color: $text-color;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+}
+
+.dialog__lang-text {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  &:hover {
+    color: $text-title;
+    transform: scale(1.2);
+  }
+}

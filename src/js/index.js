@@ -1,4 +1,5 @@
 import '../scss/style.scss'
+import './dialog'
 import './cards'
 import './buttonHandler'
 import './swiper'
