@@ -343,13 +343,54 @@ template {
   backdrop-filter: blur(10px); }
 
 .modal {
-  height: 100vh;
+  height: 100%;
   min-width: 320px;
-  overflow-y: auto;
-  border: none; }
+  border: none;
+  -webkit-animation: fade-out 0.7s ease-out;
+          animation: fade-out 0.7s ease-out; }
   @media (min-width: 360px) {
     .modal {
       width: 360px; } }
+
+.modal[open] {
+  -webkit-animation: fade-in 0.7s ease-out;
+          animation: fade-in 0.7s ease-out; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    left: -100%;
+    opacity: 0;
+    display: none; }
+  100% {
+    left: 0;
+    opacity: 1;
+    display: block; } }
+
+@keyframes fade-in {
+  0% {
+    left: -100%;
+    opacity: 0;
+    display: none; }
+  100% {
+    left: 0;
+    opacity: 1;
+    display: block; } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    left: 0;
+    display: block; }
+  100% {
+    left: -100%;
+    display: none; } }
+
+@keyframes fade-out {
+  0% {
+    left: 0;
+    display: block; }
+  100% {
+    left: -100%;
+    display: none; } }
 
 .dialog {
   display: flex;
