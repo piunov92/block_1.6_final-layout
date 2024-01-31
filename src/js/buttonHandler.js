@@ -1,12 +1,36 @@
 const buttonShowText = document.querySelector('.btn--read')
-const textDescription = document.querySelector('.text--about')
-const span = document.createElement('span')
-const textHidden =
+const textDescription = document.querySelector('.text')
+const pElement = document.createElement('p')
+let textHidden =
   'Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, ' +
   'что подтверждает большое количество постоянных клиентов. ' +
   'Мы гордимся тем, что к нам обращаются по рекомендациям и, ' +
   'в свою очередь, советуют нас родным и близким.'
+const loremIpsum =
+  'Lorem ipsum dolor sit amet. Quo voluptatem voluptatem et earum adipisci vel modi' +
+  'quisquam sed maxime placeat quo doloremque voluptate eos odio' +
+  'dolore nam dolor quas. Qui voluptas corporis qui dicta omnis ut laborum' +
+  'voluptatem est vitae obcaecati. Sit omnis voluptates et odit autem aut adipisci quia ut' +
+  'eveniet fugiat. Ut quod totam eos repudiandae enim ea voluptas quaerat est laborum doloremque.'
 
+const header = document.querySelector('.header')
+const largeScreen = window.matchMedia('(min-width: 1440px)')
+let textLgScreen = textHidden
+
+if (largeScreen.matches) {
+  textHidden = loremIpsum
+  header.style.display = 'none'
+}
+
+largeScreen.addEventListener('change', function (event) {
+  if (event.matches) {
+    header.style.display = 'none'
+    textHidden = loremIpsum
+  } else {
+    header.style.display = 'flex'
+    textHidden = textLgScreen
+  }
+})
 function buttonContent(text, btn, degrees) {
   btn.lastElementChild.textContent = text
   btn.firstElementChild.style.transform = `rotate(${degrees}deg)`
@@ -26,15 +50,15 @@ function copyButton(btnSelector, toElementSelector, addSelectors) {
 buttonShowText.addEventListener('click', function () {
   if (
     textDescription.children.length &&
-    textDescription.lastElementChild.matches('.hidden-text')
+    textDescription.lastElementChild.matches('.text__about--hidden')
   ) {
-    textDescription.removeChild(span)
+    textDescription.removeChild(pElement)
     buttonContent('Читать далее', buttonShowText, 0)
   } else {
     buttonContent('Скрыть', buttonShowText, 180)
-    span.className = 'hidden-text'
-    span.innerText = textHidden
-    textDescription.appendChild(span)
+    pElement.className = 'text__about--hidden'
+    pElement.innerText = textHidden + loremIpsum
+    textDescription.appendChild(pElement)
   }
 })
 
