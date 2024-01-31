@@ -73,6 +73,9 @@
   margin:0;
   top: -50px;
   bottom: 0;
+  @media (min-width: $screen-md) {
+    display: flex;
+  }
 }
 
 .btn--read-repair {
@@ -97,7 +100,8 @@
 }
 
 //кнопки цен
-.cards-price__button {
+.cards__button,
+.table__button {
   display: flex;
   position: absolute;
   z-index: 1;
@@ -123,9 +127,7 @@
   line-height: 24px;
   letter-spacing: -0.15px;
   text-transform: uppercase;
-}
-
-//кнопка заказа в таблице
-.table__button {
-  position: initial;
+  @media (min-width: $screen-md) {
+    position: initial;
+  }
 }

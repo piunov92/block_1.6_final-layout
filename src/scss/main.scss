@@ -64,6 +64,10 @@
 .main__description-contain {
   display: flex;
   flex-direction: column;
+  @media (min-width: $screen-md) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }
 
 .main__description-text {
@@ -86,6 +90,12 @@
   height: 230px;
   flex-shrink: 0;
   background: url(../img/logo-lg.png) no-repeat 0 2rem / cover;
+  @media (min-width: $screen-md) {
+    width: 360px;
+    height: 259.655px;
+    margin-left: 3rem;
+    flex-shrink: 0;
+  }
 }
 
 .main__description-brands {
@@ -95,6 +105,11 @@
   padding-top: 1rem;
   white-space: pre-line;
   border-top: 1px solid $line-shadow;
+  &--price-hidden {
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
 }
 
 .main__description-brands-title {

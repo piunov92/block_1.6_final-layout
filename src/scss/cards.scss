@@ -1,6 +1,10 @@
 .cards {
   display: flex;
   min-width: 0;
+  @media (min-width: $screen-md) {
+    flex-wrap: wrap;
+    justify-content: left;
+  }
   &__item {
     display: flex;
     position: relative;
@@ -46,6 +50,21 @@
       font-weight: 400;
       line-height: 18px;
       letter-spacing: 0.2px;
+    }
+  }
+  &__hidden {
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+  &__hidden--repair {
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+  &__show-md {
+    @media (min-width: $screen-md) {
+      display: flex;
     }
   }
   &__brand {

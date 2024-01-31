@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   border-top: 1px solid $line-shadow;
+  @media (min-width: $screen-md) {
+    flex-direction: row;
+  }
+
   &__about,
   &__policy,
   &__info {
@@ -9,6 +13,17 @@
     text-align: center;
     flex-grow: 1;
     flex-basis: 0;
+  }
+  &__about {
+    @media (min-width: $screen-md){
+      padding-top: 1rem;
+      text-align: left;
+    }
+  }
+  &__info {
+    @media (min-width: $screen-md){
+      text-align: right;
+    }
   }
 }
 

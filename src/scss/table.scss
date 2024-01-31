@@ -2,6 +2,10 @@
 
 .main__description-price-table {
   display: none;
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .table {

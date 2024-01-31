@@ -3,6 +3,15 @@
 
 .swiper {
   width: 320px;
+  @media (min-width: $screen-md) {
+    width: inherit;
+  }
+}
+
+.swiper-pagination {
+  @media (min-width: $screen-md) {
+    display: none;
+  }
 }
 
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {

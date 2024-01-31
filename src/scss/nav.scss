@@ -7,12 +7,22 @@
 
 .nav__btn-left {
   @extend %nav-btn;
+  .nav__divider {
+    order: 2;
+    @media (min-width: $screen-md) {
+      order: 0;
+    }
+  }
+
 }
 
 .nav__btn-right {
   @extend %nav-btn;
   .hidden {
     display: none;
+    @media (min-width: $screen-md) {
+      display: block;
+    }
   }
 }
 
