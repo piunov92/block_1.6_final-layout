@@ -5,12 +5,43 @@
 }
 
 .modal {
-  height: 100vh;
+  height: 100%;
   min-width: 320px;
-  overflow-y: auto;
+  //overflow-y: auto;
   border: none;
   @media (min-width: $screen-lt) {
     width: 360px;
+  }
+  animation: fade-out 0.7s ease-out
+}
+
+.modal[open] {
+  animation: fade-in 0.7s ease-out;
+}
+
+@keyframes fade-in {
+  0% {
+    left: -100%;
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    left: 0;
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    left: 0;
+    display: block;
+  }
+
+  100% {
+    left: -100%;
+    display: none;
   }
 }
 

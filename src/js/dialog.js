@@ -9,3 +9,13 @@ showDialog.addEventListener('click', () => {
 closeDialog.addEventListener('click', () => {
   dialog.close()
 })
+
+dialog.addEventListener('click', closeOnBackDropClick)
+
+function closeOnBackDropClick({ currentTarget, target }) {
+  const dialogElement = currentTarget
+  const isClickedOnBackDrop = target === dialogElement
+  if (isClickedOnBackDrop) {
+    dialogElement.close()
+  }
+}
