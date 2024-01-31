@@ -3,10 +3,12 @@ const showDialog = document.querySelector('#show-dialog')
 const closeDialog = document.querySelector('#close-dialog')
 
 showDialog.addEventListener('click', () => {
+  document.body.style.overflow = 'hidden'
   dialog.showModal()
 })
 
 closeDialog.addEventListener('click', () => {
+  document.body.style.overflow = 'initial'
   dialog.close()
 })
 
