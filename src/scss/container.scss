@@ -1,0 +1,14 @@
+.container {
+  &__background {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-color: $page-blur;
+    backdrop-filter: blur(10px);
+  }
+  @media (min-width: $screen-lg) {
+    display: flex;
+  }
+}
