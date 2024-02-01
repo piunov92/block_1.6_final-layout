@@ -8,7 +8,9 @@
     <title>Final layout</title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
-  <dialog class="modal">
+  <div class="container">
+    <div class="container__background"></div>
+    <div class="modal modal--size" id="modal-left">
       <main class="dialog dialog--height">
         <header class="dialog__header">
           <nav class="dialog__nav">
@@ -145,7 +147,7 @@
           </nav>
         </footer>
       </main>
-  </dialog>
+    </div>
     <div class="wrapper">
       <header class="header">
         <nav class="nav header__nav">
@@ -257,53 +259,53 @@
             <h2 class="main__description-brands-title">Ремонт техники различных брендов</h2>
             <div class="main__description-brands-swiper">
               <div class="swiper">
-                  <menu class="cards swiper-wrapper">
-                    <li class="cards__item swiper-slide">
-                      <img class="cards__brand" src="img/lenovo.png" alt="Lenovo">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide">
-                      <img class="cards__brand" src="img/acer.png" alt="acer">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide">
-                      <img class="cards__brand" src="img/sony.png" alt="hp">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide">
-                      <img class="cards__brand" src="img/lenovo.png" alt="hp">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide">
-                      <img class="cards__brand" src="img/hp.png" alt="hp">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide">
-                      <img class="cards__brand" src="img/acer.png" alt="hp">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide cards__hidden">
-                      <img class="cards__brand" src="img/bosch.png" alt="hp">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide cards__hidden">
-                      <img class="cards__brand" src="img/apple.png" alt="hp">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide cards__hidden">
-                      <img class="cards__brand" src="img/samsung.png" alt="hp">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide cards__hidden">
-                      <img class="cards__brand" src="img/sony.png" alt="hp">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                    <li class="cards__item swiper-slide cards__hidden">
-                      <img class="cards__brand" src="img/apple.png" alt="hp">
-                      <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
-                    </li>
-                  </menu>
-                  <div class="swiper-pagination"></div>
+                <menu class="cards swiper-wrapper">
+                  <li class="cards__item swiper-slide">
+                    <img class="cards__brand" src="img/lenovo.png" alt="Lenovo">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide">
+                    <img class="cards__brand" src="img/acer.png" alt="acer">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide">
+                    <img class="cards__brand" src="img/sony.png" alt="hp">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide">
+                    <img class="cards__brand" src="img/lenovo.png" alt="hp">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide">
+                    <img class="cards__brand" src="img/hp.png" alt="hp">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide">
+                    <img class="cards__brand" src="img/acer.png" alt="hp">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide cards__hidden">
+                    <img class="cards__brand" src="img/bosch.png" alt="hp">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide cards__hidden">
+                    <img class="cards__brand" src="img/apple.png" alt="hp">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide cards__hidden">
+                    <img class="cards__brand" src="img/samsung.png" alt="hp">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide cards__hidden">
+                    <img class="cards__brand" src="img/sony.png" alt="hp">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                  <li class="cards__item swiper-slide cards__hidden">
+                    <img class="cards__brand" src="img/apple.png" alt="hp">
+                    <button class="cards__btn"><img class="cards__go" src="img/go.svg" alt="Go"></button>
+                  </li>
+                </menu>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
@@ -499,5 +501,6 @@
         </div>
       </footer>
     </div>
+  </div>
   <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
