@@ -15,7 +15,7 @@ const mainTitle = document.querySelectorAll('.main__title')[0].children
 
 //заголовок правого модального окна **********************
 const dialogNavModals = document.querySelectorAll('.dialog__title')
-console.log(dialogNavModals[0])
+// const dialogModals = document.querySelectorAll('.dialog')
 
 for (let i = 0; i < mainTitle.length - (mainTitle.length - 2); i++) {
   let clone = mainTitle[i].cloneNode(true)

@@ -11,7 +11,7 @@
   <div class="container">
     <div class="container__background"></div>
     <div class="modal modal--size" id="modal-left">
-      <main class="dialog dialog--height">
+      <main class="dialog dialog--size">
         <header class="dialog__header">
           <nav class="dialog__nav">
             <button class="dialog__bt close-bt" id="close-left-dialog" name="close-bt">
@@ -149,7 +149,7 @@
       </main>
     </div>
     <div class="modal modal-right modal--size modal-right--position" id="modal-right">
-      <main class="dialog dialog--height">
+      <main class="dialog dialog--size">
         <header class="dialog__header">
           <nav class="dialog__nav dialog__nav--right">
             <button class="dialog__bt close-bt close-bt--right" id="close-right-dialog" name="close-bt">
@@ -161,6 +161,12 @@
             <div class="dialog__title"></div>
           </nav>
         </header>
+        <form action="" class="dialog__form">
+          <p><input class="dialog__form--input" type="text" id="name" required placeholder="Имя"></p>
+          <p><input class="dialog__form--input" type="email" name="email" id="call" required placeholder="Телефон"></p>
+          <p><input class="dialog__form--input" type="email" name="email" id="email" required placeholder="Электронная почта"></p>
+          <p><input class="dialog__form--input" type="email" name="email" id="message" required placeholder="Сообщение"></p>
+        </form>
         <footer class="dialog__footer">
         </footer>
       </main>

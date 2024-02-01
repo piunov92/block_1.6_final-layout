@@ -50,9 +50,15 @@
 
 .modal--size {
   height: 100vh;
-  min-width: 320px;
+  width: max-content;
 }
 
+#modal-left {
+  @media (min-width: $screen-lg) {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
 .modal__background {
   position: absolute;
   width: 100%;
@@ -99,8 +105,15 @@
   }
 }
 
-.dialog--height {
+.dialog--size {
   height: inherit;
+  width: 320px;
+  @media (min-width: $screen-md) {
+    width: 360px;
+  }
+  @media (min-width: $screen-lg) {
+    width: 440px;
+  }
 }
 
 .dialog__nav  {
@@ -261,6 +274,35 @@
   @media (min-width: $screen-lg) {
     position: fixed;
     top: 1rem;
-    right: 23rem;
+    right: 28rem;
   }
 }
+
+.dialog__form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &--input {
+    margin: .5rem;
+    padding: 1rem;
+    min-width: 288px;
+    border-radius: 8px;
+    //border: 1px solid $header__nav-divider;
+    border: 1px solid red;
+    @media (min-width: $screen-lg) {
+      width: 376px;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+#message {
+  min-width: 288px;
+  height: 118px;
+}
+
+#name {
+  margin-top: 2rem;
+}
+
