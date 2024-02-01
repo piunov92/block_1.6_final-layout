@@ -402,7 +402,14 @@ template {
 
 .modal--size {
   height: 100vh;
-  min-width: 320px; }
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; }
+
+@media (min-width: 1440px) {
+  #modal-left {
+    flex-grow: 1;
+    flex-shrink: 0; } }
 
 .modal__background {
   position: absolute;
@@ -417,13 +424,32 @@ template {
     .dialog {
       overflow: hidden; } }
 
-.dialog--height {
-  height: inherit; }
+.dialog--size {
+  height: inherit;
+  width: 320px; }
+  @media (min-width: 768px) {
+    .dialog--size {
+      width: 360px; } }
+  @media (min-width: 1440px) {
+    .dialog--size {
+      width: 440px; } }
 
 .dialog__nav {
   display: flex;
   align-items: center;
   margin-top: 1rem; }
+
+.dialog__nav--right {
+  flex-direction: column;
+  align-items: initial; }
+
+.close-bt--right {
+  display: flex;
+  text-align: initial;
+  margin-bottom: 1.5rem; }
+
+.dialog__title {
+  display: flex; }
 
 .dialog__bt {
   height: 40px;
@@ -544,7 +570,30 @@ template {
   #close-right-dialog {
     position: fixed;
     top: 1rem;
-    right: 23rem; } }
+    right: 28rem; } }
+
+.dialog__form {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  .dialog__form--input {
+    margin: .5rem;
+    padding: 1rem;
+    min-width: 288px;
+    border-radius: 8px;
+    border: 1px solid red; }
+    @media (min-width: 1440px) {
+      .dialog__form--input {
+        width: 376px;
+        margin-left: 2rem;
+        margin-right: 2rem; } }
+
+#message {
+  min-width: 288px;
+  height: 118px; }
+
+#name {
+  margin-top: 2rem; }
 
 .header {
   display: flex;
