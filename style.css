@@ -353,8 +353,8 @@ template {
   top: 0;
   z-index: 9999;
   overflow-y: auto;
-  -webkit-animation-name: 'fade-in';
-          animation-name: 'fade-in';
+  -webkit-animation-name: 'fade-in-left';
+          animation-name: 'fade-in-left';
   -webkit-animation-duration: 0.4s;
           animation-duration: 0.4s; }
   @media (min-width: 1440px) {
@@ -368,7 +368,7 @@ template {
       width: 360px;
       overflow-y: auto; } }
 
-@-webkit-keyframes fade-in {
+@-webkit-keyframes fade-in-left {
   from {
     left: -300px;
     opacity: 0; }
@@ -376,12 +376,28 @@ template {
     left: 0;
     opacity: 1; } }
 
-@keyframes fade-in {
+@keyframes fade-in-left {
   from {
     left: -300px;
     opacity: 0; }
   to {
     left: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes fade-in-right {
+  from {
+    right: -300px;
+    opacity: 0; }
+  to {
+    right: 0;
+    opacity: 1; } }
+
+@keyframes fade-in-right {
+  from {
+    right: -300px;
+    opacity: 0; }
+  to {
+    right: 0;
     opacity: 1; } }
 
 .modal--size {
@@ -420,7 +436,7 @@ template {
     margin-left: 1rem; }
 
 @media (min-width: 1440px) {
-  #close-dialog {
+  #close-left-dialog {
     display: none; } }
 
 .dialog__logo {
@@ -510,6 +526,25 @@ template {
   .dialog__lang-text:hover {
     color: #7E7E82;
     transform: scale(1.2); }
+
+.modal-right {
+  display: none;
+  flex-direction: column;
+  border: 1px solid red;
+  position: fixed;
+  z-index: 99999;
+  -webkit-animation-name: 'fade-in-right';
+          animation-name: 'fade-in-right'; }
+
+.modal-right--position {
+  left: unset;
+  right: 0; }
+
+@media (min-width: 1440px) {
+  #close-right-dialog {
+    position: fixed;
+    top: 1rem;
+    right: 23rem; } }
 
 .header {
   display: flex;
@@ -689,7 +724,7 @@ template {
     @media (min-width: 1440px) {
       .main__title-bt {
         display: flex; } }
-  .main [id=button-status] {
+  .main .btn-status--pos {
     right: 0; }
 
 .main__title {
