@@ -352,7 +352,7 @@ template {
   position: fixed;
   top: 0;
   z-index: 9999;
-  overflow-y: visible;
+  overflow-y: auto;
   -webkit-animation-name: 'fade-in';
           animation-name: 'fade-in';
   -webkit-animation-duration: 0.4s;
