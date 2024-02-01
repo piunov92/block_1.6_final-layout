@@ -21,18 +21,29 @@
     width: 360px;
     overflow-y: auto;
   }
-  animation-name: 'fade-in';
+  animation-name: 'fade-in-left';
   animation-duration: 0.4s
   //animation: fade-out 0.7s ease-out
 }
 
-@keyframes fade-in {
+@keyframes fade-in-left {
   from {
     left:-300px;
     opacity:0;
   }
   to {
     left:0;
+    opacity:1;
+  }
+}
+
+@keyframes fade-in-right {
+  from {
+    right:-300px;
+    opacity:0;
+  }
+  to {
+    right:0;
     opacity:1;
   }
 }
@@ -110,7 +121,7 @@
   }
 }
 
-#close-dialog {
+#close-left-dialog {
   @media (min-width: $screen-lg) {
     display: none;
   }
@@ -214,5 +225,27 @@
   &:hover {
     color: $text-title;
     transform: scale(1.2);
+  }
+}
+
+.modal-right {
+  display: none;
+  flex-direction: column;
+  border: 1px solid red;
+  position: fixed;
+  z-index: 99999;
+  animation-name: 'fade-in-right';
+}
+
+.modal-right--position {
+    left: unset;
+    right: 0;
+}
+
+#close-right-dialog {
+  @media (min-width: $screen-lg) {
+    position: fixed;
+    top: 1rem;
+    right: 23rem;
   }
 }

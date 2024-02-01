@@ -1,41 +1,63 @@
-const modal = document.getElementsByClassName('modal')[0]
+//все модалки
+const modalAll = document.querySelectorAll('.modal')
+//blur слой
 const backdrop = document.querySelectorAll('.container').item(0).children[0]
-const showDialog = document.getElementById('show-dialog')
-const closeDialog = document.getElementById('close-dialog')
+//получаем все кнопки открытия модалок (их всешо две на странице, кнопки repair)
+const modalRepairOpenButton = document.querySelectorAll('.btn-repair')
+//кнопка левого модального окнв
+const modalBurgerOpenButton = document.getElementById('show-dialog')
+//кнопки закрытия модалок
+const modalAllClose = document.querySelectorAll('.close-bt')
+//экран
+const largeScreen = window.matchMedia('(min-width: 1440px)')
 
-showDialog.addEventListener('click', () => {
-  modal.style.display = 'block'
+//показать модалку repair сразу от двух кнопок
+modalRepairOpenButton.forEach((button) => {
+  button.addEventListener('click', function () {
+    backdrop.style.display = 'flex'
+    modalAll[1].style.display = 'flex'
+  })
+})
+
+modalBurgerOpenButton.addEventListener('click', () => {
+  modalAll[0].style.display = 'block'
   document.body.style.overflow = 'hidden'
   backdrop.style.display = 'flex'
-  /*
-  //только для тега <dialog>
-  modal.showModal()
-  */
 })
 
-closeDialog.addEventListener('click', () => {
-  modal.style.display = 'none'
-  backdrop.style.display = 'none'
-  document.body.style.overflow = 'initial'
-  /*
-  //только для тега <dialog>
-  modal.close()
-  */
+modalAllClose.forEach((button) => {
+  button.addEventListener('click', function () {
+    backdrop.style.display = 'none'
+    document.body.style.overflow = 'initial'
+    if (largeScreen.matches) {
+      modalAll[1].style.display = 'none'
+    } else {
+      modalAll.forEach((modal) => {
+        modal.style.display = 'none'
+      })
+    }
+  })
 })
 
-const largeScreen = window.matchMedia('(min-width: 1440px)')
 largeScreen.addEventListener('change', function (event) {
   backdrop.style.display = 'none'
   if (event.matches) {
-    modal.style.display = 'block'
+    modalAll[0].style.display = 'block'
   } else {
-    modal.style.display = 'none'
+    modalAll[0].style.display = 'none'
   }
 })
 
 window.addEventListener('click', function (e) {
-  if (e.target === backdrop) {
-    modal.style.display = 'none'
+  if (largeScreen.matches) {
+    if (e.target === backdrop) {
+      modalAll[1].style.display = 'none'
+      backdrop.style.display = 'none'
+    }
+  } else if (e.target === backdrop) {
+    modalAll.forEach((modal) => {
+      modal.style.display = 'none'
+    })
     backdrop.style.display = 'none'
   }
 })
