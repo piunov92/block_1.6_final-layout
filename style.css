@@ -364,7 +364,8 @@ template {
       overflow: hidden; } }
   @media (min-width: 360px) {
     .modal {
-      width: 360px; } }
+      width: 360px;
+      overflow-y: auto; } }
 
 @-webkit-keyframes fade-in {
   from {
