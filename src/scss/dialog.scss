@@ -109,6 +109,21 @@
   margin-top: 1rem;
 }
 
+.dialog__nav--right {
+  flex-direction: column;
+  align-items: initial;
+}
+
+.close-bt--right {
+  display: flex;
+  text-align: initial;
+  margin-bottom: 1.5rem;
+}
+
+.dialog__title {
+  display: flex;
+}
+
 .dialog__bt {
   height: 40px;
   margin-right: 1rem;

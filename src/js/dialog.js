@@ -10,6 +10,20 @@ const modalBurgerOpenButton = document.getElementById('show-dialog')
 const modalAllClose = document.querySelectorAll('.close-bt')
 //экран
 const largeScreen = window.matchMedia('(min-width: 1440px)')
+//получаем детей main title
+const mainTitle = document.querySelectorAll('.main__title')[0].children
+
+//заголовок правого модального окна **********************
+const dialogNavModals = document.querySelectorAll('.dialog__title')
+console.log(dialogNavModals[0])
+
+for (let i = 0; i < mainTitle.length - (mainTitle.length - 2); i++) {
+  let clone = mainTitle[i].cloneNode(true)
+  dialogNavModals[0].appendChild(clone)
+}
+
+dialogNavModals[0].children[1].textContent = 'Обратная связь'
+//****************************
 
 //показать модалку repair сразу от двух кнопок
 modalRepairOpenButton.forEach((button) => {
