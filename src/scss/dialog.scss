@@ -12,13 +12,13 @@
     overflow: hidden;
   }
   display: none;
-  //overflow-y: auto;
   background-color: white;
   position: fixed;
   top: 0;
   z-index: 9999;
   @media (min-width: $screen-lt) {
     width: 360px;
+    overflow-y: auto;
   }
   animation-name: 'fade-in';
   animation-duration: 0.4s
