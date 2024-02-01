@@ -49,6 +49,7 @@
   position: fixed;
   top: 0;
   z-index: 9999;
+  overflow-y: visible;
   animation-name: "fade-in";
   animation-duration: 0.4s;
 }
@@ -57,7 +58,7 @@
     display: block;
     position: initial;
     z-index: initial;
-    overflow: hidden;
+    overflow-y: hidden;
   }
 }
 @media (min-width: 360px) {

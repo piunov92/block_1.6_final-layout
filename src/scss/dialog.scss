@@ -5,17 +5,18 @@
 //}
 
 .modal {
-  @media (min-width: $screen-lg) {
-    display: block;
-    position: initial;
-    z-index: initial;
-    overflow: hidden;
-  }
   display: none;
   background-color: white;
   position: fixed;
   top: 0;
   z-index: 9999;
+  overflow-y: visible;
+  @media (min-width: $screen-lg) {
+    display: block;
+    position: initial;
+    z-index: initial;
+    overflow-y: hidden;
+  }
   @media (min-width: $screen-lt) {
     width: 360px;
     overflow-y: auto;
