@@ -45,8 +45,6 @@
 
 .modal {
   display: none;
-  overflow-y: auto;
-  border: 1px solid red;
   background-color: white;
   position: fixed;
   top: 0;
