@@ -408,7 +408,7 @@ template {
 
 @media (min-width: 1440px) {
   #modal-left {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 0; } }
 
 .modal__background {
@@ -433,6 +433,10 @@ template {
   @media (min-width: 1440px) {
     .dialog--size {
       width: 440px; } }
+
+@media (min-width: 1440px) {
+  .dialog--size-left {
+    width: 320px; } }
 
 .dialog__nav {
   display: flex;
@@ -556,7 +560,6 @@ template {
 .modal-right {
   display: none;
   flex-direction: column;
-  border: 1px solid red;
   position: fixed;
   z-index: 99999;
   -webkit-animation-name: 'fade-in-right';
@@ -581,7 +584,14 @@ template {
     padding: 1rem;
     min-width: 288px;
     border-radius: 8px;
-    border: 1px solid red; }
+    border: 1px solid #EAEAEA;
+    color: #B5B6BC;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px; }
     @media (min-width: 1440px) {
       .dialog__form--input {
         width: 376px;
@@ -594,6 +604,24 @@ template {
 
 #name {
   margin-top: 2rem; }
+
+.dialog__footer-text {
+  margin: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #7E7E82;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; }
+  .dialog__footer-text p > a {
+    color: #FF3E79;
+    font-family: "TT Lakes", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; }
 
 .header {
   display: flex;
@@ -750,6 +778,11 @@ template {
     .cards__button,
     .table__button {
       position: initial; } }
+
+.dialog__form-button {
+  align-self: end;
+  margin-right: 2rem;
+  width: 136px; }
 
 .main {
   display: flex;
