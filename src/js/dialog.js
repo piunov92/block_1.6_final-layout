@@ -1,21 +1,21 @@
-//все модалки
 const modalAll = document.querySelectorAll('.modal')
-//blur слой
 const backdrop = document.querySelectorAll('.container').item(0).children[0]
-//получаем все кнопки открытия модалок (их всешо две на странице, кнопки repair)
 const modalRepairOpenButton = document.querySelectorAll('.btn-repair')
-//кнопка левого модального окнв
+const modalStatusOpenButton = document.querySelectorAll('.btn-status')
 const modalBurgerOpenButton = document.getElementById('show-dialog')
-//кнопки закрытия модалок
 const modalAllClose = document.querySelectorAll('.close-bt')
-//экран
 const largeScreen = window.matchMedia('(min-width: 1440px)')
-//получаем детей main title
 const mainTitle = document.querySelectorAll('.main__title')[0].children
-
-//заголовок правого модального окна **********************
 const dialogNavModals = document.querySelectorAll('.dialog__title')
-// const dialogModals = document.querySelectorAll('.dialog')
+const form = document.querySelectorAll('.dialog__form')[0]
+
+const submitFormButton = document
+  .querySelectorAll('.table__button')[0]
+  .cloneNode(true)
+
+modalAll[1].children[0].appendChild(submitFormButton)
+modalAll[1].children[0].children[3].className += ' dialog__form-button'
+modalAll[1].children[0].children[3].children[0].textContent = 'Отправить'
 
 for (let i = 0; i < mainTitle.length - (mainTitle.length - 2); i++) {
   let clone = mainTitle[i].cloneNode(true)
@@ -23,15 +23,32 @@ for (let i = 0; i < mainTitle.length - (mainTitle.length - 2); i++) {
 }
 
 dialogNavModals[0].children[1].textContent = 'Обратная связь'
-//****************************
 
-//показать модалку repair сразу от двух кнопок
-modalRepairOpenButton.forEach((button) => {
-  button.addEventListener('click', function () {
-    backdrop.style.display = 'flex'
-    modalAll[1].style.display = 'flex'
+function modalRightButtons(button) {
+  button.forEach((button) => {
+    button.addEventListener('click', function () {
+      if (button.matches('.btn-status')) {
+        dialogNavModals[0].children[1].textContent = 'Заказать звонок'
+        if (form.children.length > 1) {
+          form.children[0].style.display = 'none'
+          form.children[2].style.display = 'none'
+          form.children[3].style.display = 'none'
+        }
+      } else if (button.matches('.btn-repair')) {
+        dialogNavModals[0].children[1].textContent = 'Обратная связь'
+        form.children[0].style.display = 'block'
+        form.children[2].style.display = 'block'
+        form.children[3].style.display = 'block'
+      }
+      backdrop.style.display = 'flex'
+      document.body.style.overflow = 'hidden'
+      modalAll[1].style.display = 'flex'
+    })
   })
-})
+}
+
+modalRightButtons(modalRepairOpenButton)
+modalRightButtons(modalStatusOpenButton)
 
 modalBurgerOpenButton.addEventListener('click', () => {
   modalAll[0].style.display = 'block'
@@ -67,11 +84,13 @@ window.addEventListener('click', function (e) {
     if (e.target === backdrop) {
       modalAll[1].style.display = 'none'
       backdrop.style.display = 'none'
+      document.body.style.overflow = 'initial'
     }
   } else if (e.target === backdrop) {
     modalAll.forEach((modal) => {
       modal.style.display = 'none'
     })
+    document.body.style.overflow = 'initial'
     backdrop.style.display = 'none'
   }
 })

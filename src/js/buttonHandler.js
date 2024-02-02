@@ -36,7 +36,6 @@ function buttonContent(text, btn, degrees) {
   btn.firstElementChild.style.transform = `rotate(${degrees}deg)`
 }
 
-//Ф-я копирования кнопок свайпов
 function copyButton(btnSelector, toElementSelector, addSelectors) {
   const element = document.querySelector(`.${btnSelector}`).cloneNode(true)
   document.querySelector(`.${toElementSelector}`).appendChild(element)
