@@ -841,6 +841,10 @@ template {
   margin-left: 1rem; }
   .main__description-nav::-webkit-scrollbar {
     display: none; }
+  @media (min-width: 1440px) {
+    .main__description-nav {
+      flex-wrap: wrap;
+      overflow-x: unset; } }
 
 .main__description-nav-slide {
   margin: 1px;
