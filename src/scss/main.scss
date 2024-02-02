@@ -64,6 +64,10 @@
   &::-webkit-scrollbar {
     display: none;
   }
+  @media (min-width: ($screen-lg)) {
+    flex-wrap: wrap;
+    overflow-x: unset;
+  }
 }
 
 .main__description-nav-slide {
