@@ -4,8 +4,6 @@
   &__title-bt {
     display: none;
     align-items: center;
-    position: absolute;
-    right: 200px;
     margin-right: 2rem;
     color: $text-color;
     text-align: right;
@@ -25,6 +23,11 @@
   .btn-status--pos {
     right: 0;
   }
+}
+
+.main__buttons {
+  display: flex;
+  margin: auto 0 auto auto;
 }
 
 .main__title {

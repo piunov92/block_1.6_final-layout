@@ -94,3 +94,13 @@ window.addEventListener('click', function (e) {
     backdrop.style.display = 'none'
   }
 })
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    backdrop.style.display = 'none'
+    document.body.style.overflow = 'initial'
+    modalAll.forEach((modal) => {
+      modal.style.display = 'none'
+    })
+  }
+})
