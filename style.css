@@ -332,19 +332,24 @@ template {
   font-style: normal;
   font-weight: 700; }
 
-.container__background {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  height: 100%;
+.container {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); }
-
-@media (min-width: 1440px) {
-  .container {
-    display: flex; } }
+  max-width: 1441px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0 auto; }
+  .container__background {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px); }
+  @media (min-width: 1440px) {
+    .container {
+      display: flex; } }
 
 .modal {
   display: none;
@@ -790,8 +795,6 @@ template {
   .main__title-bt {
     display: none;
     align-items: center;
-    position: absolute;
-    right: 200px;
     margin-right: 2rem;
     color: #1B1C21;
     text-align: right;
@@ -808,6 +811,10 @@ template {
         display: flex; } }
   .main .btn-status--pos {
     right: 0; }
+
+.main__buttons {
+  display: flex;
+  margin: auto 0 auto auto; }
 
 .main__title {
   display: flex;
