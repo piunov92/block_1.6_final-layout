@@ -28,7 +28,6 @@ function deleteModalESC(event) {
   if (event.key === 'Escape') {
     backdrop.style.display = 'none'
     document.body.style.overflow = 'initial'
-    console.log(true)
     modalAll.forEach((modal) => {
       modal.style.display = 'none'
     })
@@ -60,6 +59,7 @@ function modalRightButtons(button) {
       document.body.style.overflow = 'hidden'
       modalAll[1].style.display = 'flex'
       closeEsc()
+      button.blur()
     })
   })
 }
