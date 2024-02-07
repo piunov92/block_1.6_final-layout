@@ -24,6 +24,22 @@ for (let i = 0; i < mainTitle.length - (mainTitle.length - 2); i++) {
 
 dialogNavModals[0].children[1].textContent = 'Обратная связь'
 
+function deleteModalESC(event) {
+  if (event.key === 'Escape') {
+    backdrop.style.display = 'none'
+    document.body.style.overflow = 'initial'
+    console.log(true)
+    modalAll.forEach((modal) => {
+      modal.style.display = 'none'
+    })
+  }
+}
+function closeEsc() {
+  document.addEventListener('keydown', deleteModalESC.bind(this), {
+    once: true
+  })
+}
+
 function modalRightButtons(button) {
   button.forEach((button) => {
     button.addEventListener('click', function () {
@@ -43,6 +59,7 @@ function modalRightButtons(button) {
       backdrop.style.display = 'flex'
       document.body.style.overflow = 'hidden'
       modalAll[1].style.display = 'flex'
+      closeEsc()
     })
   })
 }
@@ -54,6 +71,7 @@ modalBurgerOpenButton.addEventListener('click', () => {
   modalAll[0].style.display = 'block'
   document.body.style.overflow = 'hidden'
   backdrop.style.display = 'flex'
+  closeEsc()
 })
 
 modalAllClose.forEach((button) => {
@@ -92,15 +110,5 @@ window.addEventListener('click', function (e) {
     })
     document.body.style.overflow = 'initial'
     backdrop.style.display = 'none'
-  }
-})
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    backdrop.style.display = 'none'
-    document.body.style.overflow = 'initial'
-    modalAll.forEach((modal) => {
-      modal.style.display = 'none'
-    })
   }
 })
