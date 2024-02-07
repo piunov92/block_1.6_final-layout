@@ -1,9 +1,16 @@
+// eslint-disable-next-line no-undef
 const path = require('path')
 
+// eslint-disable-next-line no-undef
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+// eslint-disable-next-line no-undef
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// eslint-disable-next-line no-undef
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+// eslint-disable-next-line no-undef
+const { WebpackOpenBrowser } = require('webpack-open-browser')
 
+// eslint-disable-next-line no-undef
 module.exports = {
   // Входной файл
   entry: ['./src/js/index.js'],
@@ -21,6 +28,7 @@ module.exports = {
       // Транспилируем js с babel
       {
         test: /\.js$/,
+        // eslint-disable-next-line no-undef
         include: path.resolve(__dirname, 'src/js'),
         exclude: /node_modules/,
         use: {
@@ -86,6 +94,7 @@ module.exports = {
         from: './src/img',
         to: 'img'
       }
-    ])
+    ]),
+    new WebpackOpenBrowser({ url: 'http://localhost:8080', browser: 'chrome' })
   ]
 }

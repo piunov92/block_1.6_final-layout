@@ -53,7 +53,8 @@
     "sass-loader": "7.2.0",
     "webpack": "4.41.2",
     "webpack-cli": "3.3.7",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-open-browser": "^2.0.2"
   },
   "engineStrict": true,
   "engines": {
