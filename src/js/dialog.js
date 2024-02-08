@@ -13,9 +13,10 @@ const submitFormButton = document
   .querySelectorAll('.table__button')[0]
   .cloneNode(true)
 
+submitFormButton.className += ' dialog__form-button'
+submitFormButton.children[0].textContent = 'Отправить'
+
 modalAll[1].children[0].appendChild(submitFormButton)
-modalAll[1].children[0].children[3].className += ' dialog__form-button'
-modalAll[1].children[0].children[3].children[0].textContent = 'Отправить'
 
 for (let i = 0; i < mainTitle.length - (mainTitle.length - 2); i++) {
   let clone = mainTitle[i].cloneNode(true)
